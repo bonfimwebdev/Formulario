@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="pt-br">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trabalhe Conosco</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+       
+    <body>
+        <header class="texto">
+            <nav class="menu-container">
+                <div class="item-menu">Home</div>
+                <div class="item-menu">Quem somos</div>
+                <div class="item-menu">Contato</div>
+                <div class="item-menu">Trabalhe Conosco</div>
+            </nav>
+        </header>
+        <main>
+        
+        <div class="description">
+        <h1 class="texto">Trabalhe Conosco</h1>
+        <p class="texto">Cadastre o seu currículo no nosso banco de talentos. Os campos marcados com asterisco são obrigatórios.</p>
+        </div>
+
+        <form class="form-container texto">
+        <fieldset class="item-form">
+            <legend>Informações principais</legend>
+            <label for="nome">Nome completo*</label> <br/>
+            <input type="text" id="name" name="nome" placeholder="Digite seu nome completo" required> <br/><br/>
+            <label for="data-nasc">Data de nascimento*</label> <br/>
+            <input type="date" id="date" name="data-nasc" required> <br/><br>
+            <label for="curriculo">Anexe o seu currículo (em PDF ou Doc/Docx)</label> <br/>
+            <input type="file" id="curriculo" name="curriculo" accept=".pdf, .doc, .docx" required>
+        </fieldset>
+        <fieldset class="item-form">
+            <legend>Contato</legend>
+            <label for="email">E-mail*</label> <br/>
+            <input type="email" id="email" name="email" placeholder="usuario@email.com" required> <br/><br/>
+            <label for="email-secund">E-mail secundário</label> <br/>
+            <input type="email" id="email-secund" name="email-secund" placeholder="usuario@email.com"> <br/><br/>
+            <label for="telefone">Telefone*</label> <br/>
+            <input type="number" id="number" name="telefone" placeholder="DDD e número" required> <br/><br/>
+            <label for="telefone-secund">Telefone secundário</label> <br/>
+            <input type="number" id="number-secund" name="telefone-secund" placeholder="DDD e número">
+        </fieldset>
+        <fieldset class="item-form">
+            <legend>Informações adicionais</legend>
+            <label for="deficiencia">Possui alguma deficiência?*</label> <br/>
+            <select name="deficiencia" required>
+                <option>Sim</option>
+                <option>Não</option>
+            </select> <br/><br/>
+            <label for="descricao-deficiencia">Se sim, descreva abaixo</label><br/>
+            <textarea name="descricao-deficiencia"></textarea> <br/><br/>
+            <label for="horario">Disponibilidade de horário*</label><br/>
+            <select name="horario" required>
+                <option>Integral</option>
+                <option>Manhã e Tarde</option>
+                <option>Tarde e Noite</option>
+                <option>Madrugada</option>
+            </select>
+        </fieldset> <br/> <br/>
+
+        <input id="enviar" type="submit">
+        </form>
+        
+
+        </main>
+
+        <footer class="texto">
+            <div class="texto-footer">2020. Todos os direitos reservados.</div>
+        </footer>
+    </body>
+</html>

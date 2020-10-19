@@ -1,0 +1,152 @@
+/*
+ALTERAÇÕES 
+1. Gerais
+Ajustar fonte para Raleway;
+Colocar links na nav;
+Decidir e definir papel de parede;
+Colocar radius e ajustar opacidade em nav, form e footer;
+
+2. Em tela grande: 
+Efeito hover nos links da nav;
+Ajustar descrição deficiencia e enviar curriculo;
+Botão enviar no meio;
+
+3. Em tela pequena:
+
+*/
+
+
+@media screen and (min-width: 270px) and (max-width: 767px) {
+     .menu-container {
+          width: 90vw;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+          }
+          
+     .item-menu {
+          width: 80%;
+          padding: 10px;
+          text-align: center;
+          border: 2px solid black;
+          margin: 5px auto;
+          }
+          
+     .form-container {
+          display: flex;
+          width: 90vw;
+          height: 100%;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+          }
+          
+     .item-form {
+
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          margin: 10px auto;
+          width: 80%;
+          
+          background-color: #D8D5DB;
+          text-align: center;
+}
+
+     .texto-footer {
+          border: 2px solid black; 
+          width: 80%;
+     }
+}
+
+@media screen and (min-width: 768px) {
+     .menu-container {
+          display: flex;
+          height: 10vh;
+          width: 90vw;
+          justify-content: space-between;
+          align-content: center;
+          }
+          
+     .item-menu {
+          width: 10vw;
+          height: 5vh;
+          padding: 5px;
+          margin: 5px;
+          text-align: center;
+          border: 2px solid black;
+          }
+     .form-container {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          width: 90vw;
+     } 
+
+     .item-form {
+          margin: 20px auto;
+     }
+
+     legend {
+          text-align: center; 
+     }
+          
+     fieldset {
+          width: 25%;
+     }
+     footer {
+          width: 90vw;
+          height: 5vh;
+          text-align: center;
+          }
+}
+
+/*Edições gerais */
+
+nav, form, footer {
+     background-color: #ADACB5;
+     margin: 20px auto;
+     }
+
+footer {
+     text-align: center;
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     width: 90vw;
+     }
+
+fieldset {
+     border-radius: 20px;
+     border-color: transparent;
+     margin: 10px auto;
+     padding: 20px;
+     }
+
+.description {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     align-items: center;
+     width: 90vw;
+     margin: auto;
+     text-align: center;
+     border: solid 2px black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.texto {
+     font-family: 'Raleway', sans-serif;
+     color: #1C2030;
+}
+
+input, textarea, select {
+     border-radius: 5px;
+     box-shadow: blue;
+     width: 80%;
+     margin: 10px auto;
+}
