@@ -14,10 +14,60 @@ Botão enviar no meio;
 
 */
 
+/*Ajuste dos links*/
 a {
      text-decoration: none;
+     color: #000;
 }
 
+/*Descrição da página*/
+.description {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     align-items: center;
+     width: 90vw;
+     margin: auto;
+     text-align: center;
+     border: solid 2px black;
+}
+
+/*Texto da página*/
+.texto {
+     /*font-family: Raleway', sans-serif;*/
+     color: #1C2030;
+}
+
+/*Formulário*/
+fieldset {
+     border-radius: 20px;
+     border-color: transparent;
+     margin: 10px auto;
+     padding: 20px;
+     }
+
+input, textarea, select {
+     border-radius: 5px;
+     box-shadow: blue;
+     width: 80%;
+     margin: 10px auto;
+}
+
+/*Outros*/
+nav, form, footer {
+     background-color: #ADACB5;
+     margin: 20px auto;
+     }
+
+footer {
+     text-align: center;
+     display: flex; 
+     justify-content: center;
+     align-items: center;
+     width: 90vw;
+     }
+
+/*Configurações para telas pequenas*/
 @media screen and (min-width: 270px) and (max-width: 767px) {
      .menu-container {
           width: 90vw;
@@ -64,6 +114,7 @@ a {
      }
 }
 
+/*Configurações para telas médias e grandes*/
 @media screen and (min-width: 768px) {
      .menu-container {
           display: flex;
@@ -106,49 +157,3 @@ a {
           }
 }
 
-/*Edições gerais */
-
-nav, form, footer {
-     background-color: #ADACB5;
-     margin: 20px auto;
-     }
-
-footer {
-     text-align: center;
-     display: flex; 
-     justify-content: center;
-     align-items: center;
-     width: 90vw;
-     }
-
-fieldset {
-     border-radius: 20px;
-     border-color: transparent;
-     margin: 10px auto;
-     padding: 20px;
-     }
-
-.description {
-     display: flex;
-     flex-flow: column wrap;
-     justify-content: center;
-     align-items: center;
-     width: 90vw;
-     margin: auto;
-     text-align: center;
-     border: solid 2px black;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-.texto {
-     font-family: 'Raleway', sans-serif;
-     color: #1C2030;
-}
-
-input, textarea, select {
-     border-radius: 5px;
-     box-shadow: blue;
-     width: 80%;
-     margin: 10px auto;
-}
