@@ -11,7 +11,7 @@ Ajustar descrição deficiencia e enviar curriculo;
 Botão enviar no meio;
 
 3. Em tela pequena:
-
+Centralizar página;
 */
 
 /*Ajuste dos links*/
@@ -40,11 +40,16 @@ a {
 
 /*Formulário*/
 fieldset {
-     border-radius: 20px;
-     border-color: transparent;
+     /*border-radius: 20px;
+     border-color: transparent;*/
      margin: 10px auto;
      padding: 20px;
      }
+
+legend {
+     width: 80%;
+     border: 1px solid #000;
+}
 
 input, textarea, select {
      border-radius: 5px;
@@ -54,10 +59,16 @@ input, textarea, select {
 }
 
 /*Outros*/
-nav, form, footer {
+.menu-container, form, footer {
      background-color: #ADACB5;
      margin: 20px auto;
      }
+
+.menu-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
 
 footer {
      text-align: center;
@@ -69,6 +80,10 @@ footer {
 
 /*Configurações para telas pequenas*/
 @media screen and (min-width: 270px) and (max-width: 767px) {
+     body {
+          margin: 0 auto;
+     }
+
      .menu-container {
           width: 90vw;
           display: flex;
@@ -97,14 +112,10 @@ footer {
           }
           
      .item-form {
-
-          justify-content: space-between;
-          align-items: center;
           padding: 10px;
           margin: 10px auto;
           width: 80%;
-          
-          background-color: #D8D5DB;
+          border: 1px solid #000;
           text-align: center;
 }
 
