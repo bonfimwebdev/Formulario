@@ -2,7 +2,6 @@
 ALTERAÇÕES 
 1. Gerais
 Ajustar fonte para Raleway;
-Colocar links na nav;
 Decidir e definir papel de parede;
 Colocar radius e ajustar opacidade em nav, form e footer;
 
@@ -15,6 +14,9 @@ Botão enviar no meio;
 
 */
 
+a {
+     text-decoration: none;
+}
 
 @media screen and (min-width: 270px) and (max-width: 767px) {
      .menu-container {
