@@ -1,18 +1,18 @@
 /*
 ALTERAÇÕES 
 1. Gerais
-Ajustar fonte para Raleway;
 Decidir e definir papel de parede;
-Colocar radius e ajustar opacidade em nav, form e footer;
 
 2. Em tela grande: 
-Efeito hover nos links da nav;
+LOGO NO LADO ESQUERDO E NAV NO DIREITO
 Ajustar descrição deficiencia e enviar curriculo;
-Botão enviar no meio;
 
 3. Em tela pequena:
-Centralizar página;
+Aplicar alterações de design tela pequena
 */
+
+/*Importação de fonte Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 /*Ajuste dos links*/
 a {
@@ -29,27 +29,24 @@ a {
      width: 90vw;
      margin: auto;
      text-align: center;
-     border: solid 2px black;
 }
 
+body {
+     background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,214,213,1) 50%), url(./img/desktop-background.jpg);
+}
 /*Texto da página*/
 .texto {
-     /*font-family: Raleway', sans-serif;*/
+     font-family: "Raleway", sans-serif;
      color: #1C2030;
 }
 
 /*Formulário*/
 fieldset {
-     /*border-radius: 20px;
-     border-color: transparent;*/
+     background-color: rgba(217, 203, 189, 0.7);
+     border: none;
      margin: 10px auto;
      padding: 20px;
      }
-
-legend {
-     width: 80%;
-     border: 1px solid #000;
-}
 
 input, textarea, select {
      border-radius: 5px;
@@ -60,9 +57,8 @@ input, textarea, select {
 
 /*Outros*/
 .menu-container, form, footer {
-     background-color: #ADACB5;
-     margin: 20px auto;
-     }
+     margin: 40px auto;
+}
 
 .menu-container {
      display: flex;
@@ -78,10 +74,19 @@ footer {
      width: 90vw;
      }
 
+.item-form {
+     display: flex;
+     flex-flow: column wrap;
+     align-items: center;
+
+}
 /*Configurações para telas pequenas*/
 @media screen and (min-width: 270px) and (max-width: 767px) {
      body {
           margin: 0 auto;
+          background-image: url(./img/mobile-background.png);
+          background-repeat: no-repeat;
+          background-size: cover;
      }
 
      .menu-container {
@@ -117,7 +122,7 @@ footer {
           width: 80%;
           border: 1px solid #000;
           text-align: center;
-}
+          }
 
      .texto-footer {
           border: 2px solid black; 
@@ -127,33 +132,46 @@ footer {
 
 /*Configurações para telas médias e grandes*/
 @media screen and (min-width: 768px) {
+     body {
+          /*background-image: url(./img/desktop-background.jpg);
+          background-repeat: no-repeat;
+          background-position: bottom;
+          background-size: 100%;*/
+     }
      .menu-container {
           display: flex;
           height: 10vh;
           width: 90vw;
-          justify-content: space-between;
+          justify-content: flex-end;
           align-content: center;
           }
           
      .item-menu {
           width: 10vw;
-          height: 5vh;
+          height: 50px;
+          line-height: 50px;
           padding: 5px;
           margin: 5px;
           text-align: center;
-          border: 2px solid black;
+          background-color: #dbbea0;
           }
+
+     .item-menu:hover {
+          background-color:  #b79573;
+     }
+
+     #logo {
+          padding: 5px;
+          margin: 5px;
+          height: 100px;
+          justify-self: flex-start;
+     }
      .form-container {
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
           width: 90vw;
      } 
-
-     .item-form {
-          margin: 20px auto;
-     }
-
      legend {
           text-align: center; 
      }
@@ -161,6 +179,20 @@ footer {
      fieldset {
           width: 25%;
      }
+
+     button {
+          width: 200px;
+          height: 50px;
+          margin: 50px auto;
+          background-color: #b79573;
+          border: none;
+     }
+
+     button:hover {
+          background-color: #a38364; 
+     }
+
+
      footer {
           width: 90vw;
           height: 5vh;
