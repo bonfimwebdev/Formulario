@@ -1,14 +1,14 @@
 /*
 ALTERAÇÕES 
 1. Gerais
-Decidir e definir papel de parede;
+Remover espaço em branco pós footer;
+Verificar porque algumas palavras saem das divs.
 
 2. Em tela grande: 
-LOGO NO LADO ESQUERDO E NAV NO DIREITO
-Ajustar descrição deficiencia e enviar curriculo;
+
 
 3. Em tela pequena:
-Aplicar alterações de design tela pequena
+Centralizar página;
 */
 
 /*Importação de fonte Raleway*/
@@ -32,27 +32,31 @@ a {
 }
 
 body {
-     background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,214,213,1) 50%), url(./img/desktop-background.jpg);
+     background-image: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(218,214,213,1) 50%);
 }
-/*Texto da página*/
+
 .texto {
      font-family: "Raleway", sans-serif;
      color: #1C2030;
 }
 
-/*Formulário*/
-fieldset {
-     background-color: rgba(217, 203, 189, 0.7);
-     border: none;
-     margin: 10px auto;
-     padding: 20px;
-     }
-
 input, textarea, select {
-     border-radius: 5px;
-     box-shadow: blue;
      width: 80%;
      margin: 10px auto;
+     resize: none;
+}
+
+input[type="file"]{
+     display: none;
+}
+
+#label-curriculo {
+     text-align: center;
+     width: 50%;
+     height: 50px;
+     line-height: 50px;
+     margin: 10px auto;
+     background-color: #dbbea0;
 }
 
 /*Outros*/
@@ -66,46 +70,59 @@ input, textarea, select {
      align-items: center;
 }
 
-footer {
-     text-align: center;
-     display: flex; 
-     justify-content: center;
-     align-items: center;
-     width: 90vw;
-     }
-
 .item-form {
      display: flex;
      flex-flow: column wrap;
      align-items: center;
-
+     background-color: rgba(217, 203, 189, 0.7);
+     border: none;
+     margin: 10px auto;
+     padding: 20px;
 }
+
+button {
+     width: 200px;
+     height: 50px;
+     margin: 50px auto;
+     background-color: #b79573;
+     border: none;
+}
+
+#texto-footer {
+     text-align: center;   
+}
+
 /*Configurações para telas pequenas*/
 @media screen and (min-width: 270px) and (max-width: 767px) {
-     body {
-          margin: 0 auto;
-          background-image: url(./img/mobile-background.png);
-          background-repeat: no-repeat;
-          background-size: cover;
-     }
-
      .menu-container {
           width: 90vw;
-          display: flex;
-          flex-flow: column wrap;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
           align-content: center;
           }
           
      .item-menu {
-          width: 80%;
-          padding: 10px;
+          width: 40%;
+          height: 50px;
+          line-height: 25px;
+          padding: 5px;
+          margin: 5px;
           text-align: center;
-          border: 2px solid black;
-          margin: 5px auto;
+          background-color: #dbbea0;
           }
-          
+
+     .item-menu:active, #label-curriculo:active {
+          background-color:  #b79573;
+     }
+
+     #logo {
+          padding: 5px;
+          margin: 5px;
+          height: 100px;
+          margin: 0 auto 20vh;
+     }
+
      .form-container {
           display: flex;
           width: 90vw;
@@ -120,24 +137,16 @@ footer {
           padding: 10px;
           margin: 10px auto;
           width: 80%;
-          border: 1px solid #000;
           text-align: center;
           }
 
-     .texto-footer {
-          border: 2px solid black; 
-          width: 80%;
+     button:active {
+          background-color: #a38364; 
      }
 }
 
 /*Configurações para telas médias e grandes*/
 @media screen and (min-width: 768px) {
-     body {
-          /*background-image: url(./img/desktop-background.jpg);
-          background-repeat: no-repeat;
-          background-position: bottom;
-          background-size: 100%;*/
-     }
      .menu-container {
           display: flex;
           height: 10vh;
@@ -156,7 +165,7 @@ footer {
           background-color: #dbbea0;
           }
 
-     .item-menu:hover {
+     .item-menu:hover, #label-curriculo:hover {
           background-color:  #b79573;
      }
 
@@ -164,7 +173,12 @@ footer {
           padding: 5px;
           margin: 5px;
           height: 100px;
-          justify-self: flex-start;
+          position: absolute;
+          left: 80px;
+     }
+
+     #dropdown-menu {
+          display: none;
      }
      .form-container {
           display: flex;
@@ -180,23 +194,16 @@ footer {
           width: 25%;
      }
 
-     button {
+     /*button {
           width: 200px;
           height: 50px;
           margin: 50px auto;
           background-color: #b79573;
           border: none;
-     }
+     }*/
 
      button:hover {
           background-color: #a38364; 
      }
-
-
-     footer {
-          width: 90vw;
-          height: 5vh;
-          text-align: center;
-          }
 }
 
